@@ -26,7 +26,7 @@ class IngredientsEditDetail extends Component {
             <span><strong> {name} </strong></span>
           <DragHandle />
         </li>
-      )
+      );
 
     return(
       <li className="list-group-item">
