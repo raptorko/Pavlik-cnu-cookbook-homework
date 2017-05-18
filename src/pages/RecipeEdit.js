@@ -100,14 +100,14 @@ class RecipeEditPage extends Component {
                            amount: amountInputValue,
                            name: nameInputValue }];
     this.setState(({ recipe }) =>
-      update({ recipe }, { recipe: { ingredients: { $push: newIngredient}}}));
+      update({ recipe }, { recipe: { ingredients: { $push: newIngredient }}}));
   }
 
   addIngredientGroup(newGroupInput) {
     let newIngredient = [{ isGroup: true,
                            name: newGroupInput }];
     this.setState(({ recipe }) =>
-      update({ recipe }, { recipe: { ingredients: { $push: newIngredient}}}));
+      update({ recipe }, { recipe: { ingredients: { $push: newIngredient }}}));
   }
 
   removeIngredient(i) {
@@ -115,14 +115,14 @@ class RecipeEditPage extends Component {
       return ingredient !== i;
     });
     this.setState(({ recipe }) =>
-      update({ recipe }, { recipe: { ingredients: { $set: updatedIngredients}}}));
+      update({ recipe }, { recipe: { ingredients: { $set: updatedIngredients }}}));
   }
 
   onSortEnd({oldIndex, newIndex}) {
     let {ingredients} = this.state.recipe;
 
     this.setState(({ recipe }) =>
-      update({ recipe }, { recipe: { ingredients: { $set: arrayMove(ingredients, oldIndex, newIndex)}}}));
+      update({ recipe }, { recipe: { ingredients: { $set: arrayMove(ingredients, oldIndex, newIndex) }}}));
   }
 
   render() {
