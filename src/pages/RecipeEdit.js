@@ -122,8 +122,8 @@ class RecipeEditPage extends Component {
     let {ingredients} = this.state.recipe;
 
     this.setState(({ recipe }) =>
-      update({ recipe }, { recipe: { ingredients: { $set:arrayMove(ingredients, oldIndex, newIndex)}}}));
-  };
+      update({ recipe }, { recipe: { ingredients: { $set: arrayMove(ingredients, oldIndex, newIndex)}}}));
+  }
 
   render() {
     // This render servers only as an example how to submit a form
