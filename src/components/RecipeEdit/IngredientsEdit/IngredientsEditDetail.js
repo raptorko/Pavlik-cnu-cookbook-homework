@@ -17,7 +17,7 @@ class IngredientsEditDetail extends Component {
     const { amount, amountUnit, name, ingredient } = this.props;
 
     if(ingredient.isGroup) return(
-        <li className="list-group-item-warning">
+        <li className="list-group-item list-group-item-warning">
           <Button
             onClick={this.onRemove.bind(this, ingredient)}
             className="btn-xs btn-danger">

@@ -8,7 +8,7 @@ export default function IngredientsDetail({ amount,
 
   if(isGroup)
   return(
-      <li className="list-group-item-warning">
+      <li className="list-group-item list-group-item-warning">
           <span><strong> {name} </strong></span>
       </li>
     )
